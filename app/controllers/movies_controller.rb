@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
 	def index
-		@movies = Movie.all
+		@movies = Movie.released
 	end
 
 	def show
@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
 
 	def update
 		@movie = Movie.find(params[:id])
-		movie_params = @movie.update(movie_params) 
+		@movie.update(movie_params)
 		redirect_to @movie						
 	end
 
@@ -25,6 +25,12 @@ class MoviesController < ApplicationController
 	def create
 		@movie = Movie.new(movie_params)
 		@movie.save
+		redirect_to @movie
+	end
+
+	def destroy
+		@movie = Movie.find(params[:id])
+		@movie.destroy
 		redirect_to @movie
 	end
 
