@@ -1,12 +1,19 @@
-<h1><%= pluralize(@movies.size, 'Movie') %></h1>
+<div class = "container">
+<h1><%= pluralize(@movies.size, 'Movie') %></h1></div>
 
 <% @movies.each do |movie| %>
-  <article>
-    <header>
-      <%= image_for(movie) %>
-      <h2><%= link_to movie.title, movie %></h2>
-      <h3><%= movie.cast %></h3>
-    </header>
+    <article class = "container">
+        <div class= "row">
+    <header class = "col-md-10">
+      <div class = "col-md-1"></div>
+     <div class ="col-md-2"> <br><br><%= image_for(movie) %></div>
+      <div class = "col-md-7"><h2><%= link_to movie.title, movie %></h2>
+      <h3><%= movie.cast %></h3></div>
+    </header></div>
+    <div class = row>
+      <div class = "col-md-10">
+      <div class = "col-md-3"></div>
+      <div class = "col-md-7">
     <p>
       <h3>Description</h3>
       <%= truncate(movie.description, length: 40, separator: ' ') %>
@@ -29,5 +36,6 @@
         <td><%= format_gross(movie) %></td>
       </tr>
     </table>
+  </div></div></div></div>
   </article>
 <% end %>

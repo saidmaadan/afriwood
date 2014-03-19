@@ -12,10 +12,13 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+    <%= render 'layouts/sidebar' %>
     <main role="main">
        <%= render 'layouts/messages' %>
+
        <%= yield %>
     </main>
-    <%= render 'layouts/footer' %>
+    
   </body>
+  <%= render 'layouts/footer' %>
 </html>

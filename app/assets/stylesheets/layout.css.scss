@@ -1,0 +1,18 @@
+@import "colors";
+
+footer{
+	background: $f-color;
+	height: 70px;
+	padding-top: 30px;
+}
+.device {
+	width: 350px;
+	height: 589px;
+	background: url('device-hero.png') no-repeat;
+}
+aside
+{
+	float: right;
+	margin-top: -670px;
+	margin-right: -100px
+}

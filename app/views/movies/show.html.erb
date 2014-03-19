@@ -1,8 +1,18 @@
-<article>
+<div class = "container">
+  <article>
+  <div class = "row">
   <header>
-    <%= image_for(@movie) %>
-    <h1><%= @movie.title %></h1>
-  </header>
+    <div class = "col-md-7">
+    <div class="col-md-5"><br><br>
+    <h1><%= @movie.title %></h1></div>
+    <br>
+    <div class = "col-md-2"><br><br>
+    <%= image_for(@movie) %></div>
+  </div>
+  </header></div>
+  <div class = "row">
+    <div class = "col md-7">
+      <div class = "col md-5">
   <h2>Description</h2>
   <p>
     <%= @movie.description %>
@@ -32,8 +42,15 @@
   <h3>Total Gross</h3>
   <p>
     <%= format_gross(@movie) %>
-  </p>
+  </p></div>
+<div class="col-md-2"></div></div></div>
 </article>
+<aside>
+  <div class="col-md-5 hidden-xs">
+      <div class="device pull-right"></div>
+      </div>
+</aside>
+</div>
 
 <%= link_to "All Movies", movies_path %>
 <%= link_to "Edit", edit_movie_path(@movie) %>
