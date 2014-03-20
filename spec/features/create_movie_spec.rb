@@ -4,7 +4,7 @@ describe "Creating a new movie" do
   it "saves the movie and shows the new event's details" do    
     visit movies_url
     
-    click_link 'Add New Movie'
+    click_link 'Add Movie'
     
     expect(current_path).to eq(new_movie_path)
 		
